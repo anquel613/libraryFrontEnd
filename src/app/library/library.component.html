@@ -1,0 +1,88 @@
+<div class="card border-primary mb-3" >
+  <div class="card-header">authors</div>
+  <div class="card-body text-primary">
+    <h5 class="card-title">Authors list</h5>
+
+<div class="btn btn-rounded btn-primary" type="button" [routerLink]= "['/authors/form']">
+  <button class="btn btn-rounded btn-primary" type="button">Create Author</button>
+</div>
+
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <td>id</td>
+          <td>name</td>
+          <td>birth</td>
+          <td>city</td>
+          <td>mail</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let author of authors">
+          <td>{{author.id}}</td>
+          <td>{{author.name}}</td>
+          <td>{{author.birth}}</td>
+          <td>{{author.city}}</td>
+          <td>{{author.mail}}</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="btn btn-rounded btn-primary" type="button" [routerLink]= "['/books/form']">
+      <button class="btn btn-rounded btn-primary" type="button">Create Book</button>
+    </div>
+
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <td>id</td>
+          <td>title</td>
+          <td>year</td>
+          <td>genre</td>
+          <td>pages</td>
+          <td>editorial</td>
+          <td>author</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let book of books">
+          <td>{{book.id}}</td>
+          <td>{{book.title}}</td>
+          <td>{{book.year}}</td>
+          <td>{{book.genre}}</td>
+          <td>{{book.pages}}</td>
+          <td>{{book.editorial}}</td>
+          <td>{{book.author}}</td>
+        </tr>
+      </tbody>
+    </table>
+
+
+    <div class="btn btn-rounded btn-primary" type="button" [routerLink]= "['/editorials/form']">
+      <button class="btn btn-rounded btn-primary" type="button">Create Editorial</button>
+    </div>
+
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <td>id</td>
+          <td>name</td>
+          <td>address</td>
+          <td>telephone</td>
+          <td>mail</td>
+          <td>booksLimit</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let editorial of editorials">
+          <td>{{editorial.id}}</td>
+          <td>{{editorial.name}}</td>
+          <td>{{editorial.address}}</td>
+          <td>{{editorial.telephone}}</td>
+          <td>{{editorial.mail}}</td>
+          <td>{{editorial.booksLimit}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

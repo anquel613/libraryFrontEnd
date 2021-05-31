@@ -1,0 +1,53 @@
+<div class="card bg-dark text-white">
+  <div class="card-header">
+    {{title}}
+  </div>
+
+  <div class="card-body">
+    <form (ngSubmit) = "create()">
+      <div class="form-group row">
+        <label for ="name" class ="col-form-label col-sm-2"> name </label>
+        <div class = "col-sm-6">
+          <input type="text" class="form-control" [(ngModel)]="editorial.name" name="name">
+        </div>
+      </div>
+
+
+      <div class="form-group row">
+        <label for ="address" class ="col-form-label col-sm-2"> address </label>
+        <div class = "col-sm-6">
+          <input type="text" class="form-control" [(ngModel)]="editorial.address" name="address">
+        </div>
+      </div>
+
+
+      <div class="form-group row">
+        <label for ="telephone" class ="col-form-label col-sm-2"> telephone </label>
+        <div class = "col-sm-6">
+          <input type="text" class="form-control" [(ngModel)]="editorial.telephone" name="telephone">
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for ="mail" class ="col-form-label col-sm-2"> mail </label>
+        <div class = "col-sm-6">
+          <input type="text" class="form-control" [(ngModel)]="editorial.mail" name="mail">
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for ="booksLimit" class ="col-form-label col-sm-2"> booksLimit </label>
+        <div class = "col-sm-6">
+          <input type="text" class="form-control" [(ngModel)]="editorial.booksLimit" name="booksLimit">
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <div class="col-sm-6">
+          <button class="btn btn-primary" role="button">Create</button>
+        </div>
+      </div>
+
+    </form>
+  </div>
+</div>
